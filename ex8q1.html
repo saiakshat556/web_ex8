@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8q1 (23BCE1777)</title>
+</head>
+<body>
+    <script>
+
+        function calculator() {
+
+            let num1 = parseFloat(prompt("Enter the first number:"));
+            let num2 = parseFloat(prompt("Enter the second number:"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Invalid input. Please enter valid numbers.");
+                return;
+            }
+
+            let operation = prompt(
+                "Choose an operation: + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus)"
+            );
+
+            let result;
+            let operationName;
+
+            switch (operation) {
+                case "+":
+                    result = num1 + num2;
+                    operationName = "Addition";
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    operationName = "Subtraction";
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    operationName = "Multiplication";
+                    break;
+                case "/":
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                        operationName = "Division";
+                    } else {
+                        alert("Division by zero is not allowed.");
+                        return;
+                    }
+                    break;
+                case "%":
+                    result = num1 % num2;
+                    operationName = "Modulus";
+                    break;
+                default:
+                    alert("Invalid operation. Please try again.");
+                    return;
+            }
+
+            // Display the result in a single alert
+            alert(
+                `Calculation Details:\n` +
+                `---------------------\n` +
+                `First Number: ${num1}\n` +
+                `Second Number: ${num2}\n` +
+                `Operation: ${operationName}\n` +
+                `Result: ${result}`
+            );
+        }
+
+        // Call the calculator function
+        calculator();
+    </script>
+</body>
+</html>

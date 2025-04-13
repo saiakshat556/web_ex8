@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8q4(23BCE1777)</title>
+</head>
+<body>
+    <script>
+        function calculateCharges() {
+            let hoursWorked = parseFloat(prompt("Enter the number of hours worked:"));
+            if (isNaN(hoursWorked) || hoursWorked <= 0) {
+                alert("Invalid input for hours worked.");
+                return;
+            }
+
+            let costOfMaterials = parseFloat(prompt("Enter the cost of materials:"));
+            if (isNaN(costOfMaterials) || costOfMaterials < 0) {
+                alert("Invalid input for cost of materials.");
+                return;
+            }
+
+            let ratePerHour = 45;
+            let labourCost = ratePerHour * hoursWorked;
+            let totalCharge = labourCost + costOfMaterials;
+
+            alert(
+                `Charges Summary:\n` +
+                `Labour Cost: Rs.${labourCost.toFixed(2)}\n` +
+                `Cost of Materials: Rs.${costOfMaterials.toFixed(2)}\n` +
+                `Total Charge: Rs.${totalCharge.toFixed(2)}`
+            );
+        }
+
+        calculateCharges();
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8q5(23BCE1777)</title>
+</head>
+<body>
+    <script>
+        // Accept registration number
+        let regNo = prompt("Enter your registration number:");
+
+        // Display the registration number with inline styles using document.write
+        document.write(
+            `<div style="border: 2px solid red; padding: 10px; text-align: center; width: 150px; margin: 10px auto;">
+                <span style="font-weight: bold;">${regNo}</span>
+            </div>`
+        );
+
+        // Accept name
+        let name = prompt("Enter your name:");
+
+        // Display the name with inline styles using innerHTML
+        let nameDiv = document.createElement("div");
+        nameDiv.style.border = "2px solid black";
+        nameDiv.style.padding = "10px";
+        nameDiv.style.width = "150px";
+        nameDiv.style.margin = "10px auto";
+        nameDiv.style.textAlign = "center";
+        nameDiv.style.fontWeight = "bold";
+        nameDiv.style.color = "red";
+        nameDiv.innerHTML = `*${name}*`;
+
+        document.body.appendChild(nameDiv);
+    </script>
+</body>
+</html>

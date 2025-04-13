@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8q3 (23BCE1777)</title>
+</head>
+<body>
+    <script>
+        function getStudentRegistration() {
+            let isStudent = confirm("Are you a student? Click 'OK' for Yes or 'Cancel' for No.");
+
+            if (isStudent) {
+                let regNumber = prompt("Please enter your registration number:");
+
+                if (regNumber && regNumber.trim() !== "") {
+                    alert(`Thank you! Your registration number "${regNumber}" has been recorded.`);
+                } else {
+                    alert("You did not enter a valid registration number.");
+                }
+            } else {
+                alert("You must be a student to proceed with registration.");
+            }
+        }
+        getStudentRegistration();
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8q6(23BCE1777)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            width: 100px;
+        }
+        h3 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h3>TICKET BOOTH</h3>
+    <form>
+        <div class="form-group">
+            <label for="adults">Adults (₹10 each)</label><br>
+            <input type="number" id="adults">
+        </div>
+        <div class="form-group">
+            <label for="children">Children (₹5 each)</label><br>
+            <input type="number" id="children">
+        </div>
+        <div class="form-group">
+            <label for="total">Total</label><br>
+            <input type="text" id="total" readonly>
+        </div>
+        <button type="button" onclick="calculateTotal()">Total</button>
+    </form>
+
+    <script src="booth.js"></script>
+</body>
+</html>
